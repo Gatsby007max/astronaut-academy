@@ -1,0 +1,38 @@
+name: Bug report / 不具合報告
+description: Report a reproducible problem with the game / 再現できる不具合を報告
+title: '[Bug] '
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: 'Please do not include personal or sensitive information. 教材・出典の訂正や感想はDiscussionsへ。'
+  - type: input
+    id: module
+    attributes:
+      label: Module and phase / コースと段階
+      placeholder: 'ISS / Quiz'
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce / 再現手順
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual result / 期待した結果と実際の結果
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Browser, OS, and device / ブラウザ・OS・端末
+    validations:
+      required: true
+  - type: dropdown
+    id: locale
+    attributes:
+      label: Language / 言語
+      options: ['日本語', 'English', 'Both / 両方']
+    validations:
+      required: true

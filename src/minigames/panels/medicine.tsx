@@ -1,0 +1,21 @@
+import { tr, trt } from '../../i18n/tr'
+import { useEffect, useState } from 'react'
+import { useGame } from '../../game/store'
+import { HudButton, Label, Meter } from '../../ui/kit'
+import { usePanelShift } from '../../ui/usePanelShift'
+import { MiniBriefing } from '../MiniShell'
+import { usePractice } from '../practice'
+import { advanceHealth, healthScore, initialHealth, validHealthPlan, type HealthPlan, type Health } from '../scoring'
+import type { MiniGameProps } from '../registry'
+const challenges=[tr("到着後の適応期間。運動と休息をバランスよく。"),tr("保守作業が増えました。回復時間を忘れずに。"),tr("長期滞在の中盤。運動を継続し、食事を確保。"),tr("実験が集中する期間。疲労の蓄積を監視。"),tr("帰還準備が始まりました。継続することが大切。"),tr("最終月。帰還後の重力への再適応も意識。")]
+const labels:Record<keyof Health,string>={bone:tr("骨の維持"),muscle:tr("筋力の維持"),cardio:tr("心肺の維持"),recovery:tr("回復・余裕")}
+export default function MedicineGame(p:MiniGameProps){
+ const[start,setStart]=useState(false);const[month,setMonth]=useState(0);const[health,setHealth]=useState(initialHealth);const[history,setHistory]=useState<Health[]>([]);const[plan,setPlan]=useState<HealthPlan>({resist:40,aerobic:40,rest:30,nutrition:'balanced'})
+ usePanelShift(start?'right':'none');useEffect(()=>{useGame.getState().setFocus('body');return()=>usePractice.getState().set({progress:0})},[])
+ if(!start)return <MiniBriefing title={tr("180日ミッションの健康計画")} color={p.color} lines={[tr("30日を1ターンとして、6ターン分の活動計画を組みます。"),tr("抵抗運動・有酸素運動・回復枠に、ゲーム内の120分を配分します。食事方針も選んでください。"),tr("数値は対策の関係を学ぶための架空の指数です。医学的予測や運動処方ではありません。")]} onStart={()=>setStart(true)} onExit={p.onExit}/>
+ const total=plan.resist+plan.aerobic+plan.rest
+ return <><div className="training-caption">HUMAN RESEARCH / {month*30} {tr("DAYS・医学モデルではない学習用指数")}</div><section className="training-panel glass rounded-xl"><Label>MISSION DAY {month*30} / 180</Label><h2>{month===6?tr("180日間の活動記録"):trt`第${month+1}月の計画`}</h2><div className="grid grid-cols-2 gap-4 my-4">{Object.entries(health).map(([key,n])=><div key={key}><span className="text-xs">{labels[key as keyof Health]}</span><b className="float-right training-stat text-hud">{Math.round(n)}</b><Meter value={n/100} color={n<70?'#ffb547':p.color} className="mt-2"/></div>)}</div>
+ <svg viewBox="0 0 320 65" role="img" aria-label={tr("健康指数の推移")} className="w-full rounded bg-black/20 mb-4">{Object.keys(health).map((key,k)=><polyline key={key} fill="none" stroke={['#ff8fb1','#7fe3ff','#52f2a4','#ffb547'][k]} strokeWidth="2" points={[initialHealth(),...history].map((h,i)=>`${i*50+10},${60-h[key as keyof Health]*.5}`).join(' ')}/>)}</svg>
+ {month<6?<><p>{challenges[month]}</p>{(['resist','aerobic','rest'] as const).map((key,i)=><label key={key} className="block my-4 text-sm">{[tr("抵抗運動 ARED"),tr("有酸素運動 T2 / CEVIS"),tr("回復・調整枠")][i]} <span className="float-right text-hud">{plan[key]} {tr("分")}</span><input aria-label={[tr("抵抗運動"),tr("有酸素運動"),tr("回復")][i]} className="w-full accent-pink-300" type="range" min="0" max="80" step="5" value={plan[key]} onChange={e=>setPlan({...plan,[key]:+e.target.value})}/></label>)}<Label>{tr("食事方針")}</Label><select aria-label={tr("食事方針")} value={plan.nutrition} onChange={e=>setPlan({...plan,nutrition:e.target.value as HealthPlan['nutrition']})} className="w-full bg-slate-900 rounded p-3 text-sm mt-2"><option value="balanced">{tr("必要なエネルギーと栄養を食事で確保")}</option><option value="restricted">{tr("食事量を大幅に制限")}</option><option value="supplements">{tr("食事を減らしサプリメント中心")}</option></select><p className="mt-3">{tr("配分")}{total} {tr("/ 120 分。")}{total>120?tr("120分以内に調整してください。"):tr("回復枠は睡眠時間そのものではありません。")}</p><HudButton className="mt-4 w-full" disabled={!validHealthPlan(plan)} variant="primary" onClick={()=>{const h=advanceHealth(health,plan,[0,3,1,5,2,0][month]);setHealth(h);setHistory([...history,h]);setMonth(month+1);usePractice.getState().set({progress:(month+1)/6})}}>{tr("この計画で30日を進める")}</HudButton></>:<><p>{tr("運動だけ、栄養だけでは維持できません。各指標の推移を振り返り、疲労の強い月に回復を確保できたか確認しましょう。")}</p><HudButton className="mt-4 w-full" variant="primary" onClick={()=>p.onFinish(healthScore(health))}>{tr("評価を見る")}</HudButton></>}
+ <a className="mt-4 block text-xs text-hud underline" href="https://www.nasa.gov/humans-in-space/the-human-body-in-space/" target="_blank" rel="noreferrer">{tr("NASA：宇宙と人体 ↗")}</a></section></>
+}

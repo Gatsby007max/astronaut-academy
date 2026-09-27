@@ -1,0 +1,49 @@
+{
+  "name": "astronaut-academy",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "build:pages": "tsc --noEmit && DEPLOY_TARGET=pages vite build --outDir dist-pages",
+    "build:itch": "tsc --noEmit && DEPLOY_TARGET=itch vite build --outDir dist-itch",
+    "pack:itch": "npm run build:itch && node scripts/pack-itch.mjs",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "check:content": "node scripts/check-content.mjs",
+    "assets:fetch": "node scripts/fetch-nasa-assets.mjs",
+    "assets:optimize": "node scripts/optimize-assets.mjs",
+    "assets": "npm run assets:fetch && npm run assets:optimize",
+    "check:build": "npm run build && node scripts/check-build.mjs",
+    "audit:sources": "node scripts/audit-sources.mjs"
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.7.8",
+    "@react-three/fiber": "^9.8.1",
+    "@react-three/postprocessing": "^3.1.2",
+    "motion": "^13.4.4",
+    "postprocessing": "^6.39.5",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "three": "^0.186.1",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@gltf-transform/core": "^4.5.0",
+    "@gltf-transform/extensions": "^4.5.0",
+    "@gltf-transform/functions": "^4.5.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/three": "^0.186.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "draco3dgltf": "^1.5.7",
+    "meshoptimizer": "^1.2.0",
+    "sharp": "^0.35.4",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.1",
+    "vitest": "^5.0.2"
+  }
+}

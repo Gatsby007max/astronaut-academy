@@ -1,0 +1,205 @@
+{
+  "generatedAt": "2026-09-26T00:31:40.777Z",
+  "assets": {
+    "emu": {
+      "file": "/assets/emu.glb",
+      "bytes": 403464,
+      "gzipBytes": 295425,
+      "sources": [
+        "emu"
+      ],
+      "triangles": 69791
+    },
+    "iss": {
+      "file": "/assets/iss.glb",
+      "bytes": 3723168,
+      "gzipBytes": 2404753,
+      "sources": [
+        "iss"
+      ],
+      "triangles": 181838
+    },
+    "issHd": {
+      "file": "/assets/iss_hd.glb",
+      "bytes": 4791540,
+      "gzipBytes": 3574634,
+      "sources": [
+        "iss"
+      ],
+      "triangles": 159049
+    },
+    "stars4k": {
+      "file": "/assets/stars_4k.webp",
+      "bytes": 2311432,
+      "gzipBytes": 2312160,
+      "sources": [
+        "stars"
+      ]
+    },
+    "stars2k": {
+      "file": "/assets/stars_2k.webp",
+      "bytes": 155946,
+      "gzipBytes": 156014,
+      "sources": [
+        "stars"
+      ]
+    },
+    "earthDay4k": {
+      "file": "/assets/earth_day_4k.webp",
+      "bytes": 676870,
+      "gzipBytes": 677035,
+      "sources": [
+        "earthDay"
+      ]
+    },
+    "earthNight4k": {
+      "file": "/assets/earth_night_4k.webp",
+      "bytes": 233656,
+      "gzipBytes": 225924,
+      "sources": [
+        "earthNight"
+      ]
+    },
+    "earthDay2k": {
+      "file": "/assets/earth_day_2k.webp",
+      "bytes": 210282,
+      "gzipBytes": 210365,
+      "sources": [
+        "earthDay"
+      ]
+    },
+    "earthNight2k": {
+      "file": "/assets/earth_night_2k.webp",
+      "bytes": 65498,
+      "gzipBytes": 64131,
+      "sources": [
+        "earthNight"
+      ]
+    },
+    "earthClouds2k": {
+      "file": "/assets/earth_clouds_2k.webp",
+      "bytes": 438914,
+      "gzipBytes": 439067,
+      "sources": [
+        "earthClouds"
+      ]
+    },
+    "moonColor4k": {
+      "file": "/assets/moon_color_4k.webp",
+      "bytes": 1150158,
+      "gzipBytes": 1150531,
+      "sources": [
+        "moonColor"
+      ]
+    },
+    "moonColor2k": {
+      "file": "/assets/moon_color_2k.webp",
+      "bytes": 279750,
+      "gzipBytes": 279858,
+      "sources": [
+        "moonColor"
+      ]
+    },
+    "moonNormal2k": {
+      "file": "/assets/moon_normal_2k.webp",
+      "bytes": 708932,
+      "gzipBytes": 709170,
+      "sources": [
+        "moonDemGlobal"
+      ]
+    },
+    "lunarSouthPole": {
+      "file": "/assets/lunar_south_pole.bin",
+      "bytes": 132098,
+      "gzipBytes": 128314,
+      "sources": [
+        "moonDemDetail"
+      ],
+      "grid": 257,
+      "halfSizeKm": 36,
+      "minMeters": -3979,
+      "maxMeters": 1877,
+      "note": "Azimuthal equidistant reprojection centered on the lunar south pole; uint16 little-endian, row-major"
+    },
+    "titleOrbit": {
+      "file": "/assets/title_orbit.webp",
+      "bytes": 47612,
+      "gzipBytes": 47611,
+      "sources": [
+        "titleOrbit"
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "titleOrbit",
+      "title": "The setting sun highlights Earth's horizon",
+      "credit": "NASA / ISS Expedition 71",
+      "page": "https://images.nasa.gov/details/iss071e581260_alt",
+      "url": "https://images-assets.nasa.gov/image/iss071e581260_alt/iss071e581260_alt~large.jpg"
+    },
+    {
+      "id": "iss",
+      "title": "International Space Station 3D Model",
+      "credit": "NASA Visualization Technology Applications and Development (VTAD)",
+      "page": "https://science.nasa.gov/resource/international-space-station-3d-model/",
+      "url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/i/ISS_stationary.glb"
+    },
+    {
+      "id": "emu",
+      "title": "Extravehicular Mobility Unit (EMU) 3D Model",
+      "credit": "NASA/Michael D. Carbajal",
+      "page": "https://science.nasa.gov/3d-resources/extravehicular-mobility-unit/",
+      "url": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/extravehicular-mobility-unit/Extravehicular%20Mobility%20Unit.glb"
+    },
+    {
+      "id": "earthDay",
+      "title": "Blue Marble Next Generation: Topography and Bathymetry (December)",
+      "credit": "NASA Earth Observatory / Reto Stöckli",
+      "page": "https://visibleearth.nasa.gov/images/73909",
+      "url": "https://eoimages.gsfc.nasa.gov/images/imagerecords/73000/73909/world.topo.bathy.200412.3x5400x2700.jpg"
+    },
+    {
+      "id": "earthNight",
+      "title": "Earth at Night (Black Marble) 2016",
+      "credit": "NASA Earth Observatory / Joshua Stevens, Miguel Román (NASA GSFC)",
+      "page": "https://earthobservatory.nasa.gov/features/NightLights",
+      "url": "https://eoimages.gsfc.nasa.gov/images/imagerecords/144000/144898/BlackMarble_2016_3km.jpg"
+    },
+    {
+      "id": "earthClouds",
+      "title": "Blue Marble: Clouds",
+      "credit": "NASA Goddard Space Flight Center / Reto Stöckli",
+      "page": "https://visibleearth.nasa.gov/images/57747",
+      "url": "https://eoimages.gsfc.nasa.gov/images/imagerecords/57000/57747/cloud_combined_2048.jpg"
+    },
+    {
+      "id": "moonColor",
+      "title": "CGI Moon Kit: LROC WAC Color Map",
+      "credit": "NASA's Scientific Visualization Studio / LRO LROC (Arizona State University)",
+      "page": "https://svs.gsfc.nasa.gov/4720",
+      "url": "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_poles_4k.tif"
+    },
+    {
+      "id": "moonDemGlobal",
+      "title": "CGI Moon Kit: LOLA Displacement Map (4 ppd)",
+      "credit": "NASA's Scientific Visualization Studio / LRO LOLA",
+      "page": "https://svs.gsfc.nasa.gov/4720",
+      "url": "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/ldem_4_uint.tif"
+    },
+    {
+      "id": "moonDemDetail",
+      "title": "CGI Moon Kit: LOLA Displacement Map (16 ppd)",
+      "credit": "NASA's Scientific Visualization Studio / LRO LOLA",
+      "page": "https://svs.gsfc.nasa.gov/4720",
+      "url": "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/ldem_16_uint.tif"
+    },
+    {
+      "id": "stars",
+      "title": "Deep Star Maps 2020",
+      "credit": "NASA's Scientific Visualization Studio",
+      "page": "https://svs.gsfc.nasa.gov/4851",
+      "url": "https://svs.gsfc.nasa.gov/vis/a000000/a004800/a004851/starmap_2020_4k.exr"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+import { useMemo } from 'react'
+import { panelTexture } from '../engine/textures'
+export function Monitor({label='SYSTEM',position=[0,0,0],scale=[1,1,1],alert=false}:{label?:string;position?:[number,number,number];scale?:[number,number,number];alert?:boolean}){
+ const map=useMemo(()=>panelTexture(`telemetry-${label}-${alert}`,(c,s)=>{c.fillStyle='#020c18';c.fillRect(0,0,s,s);c.fillStyle=alert?'#ff626b':'#80e4ed';c.font='bold 27px monospace';c.fillText(label,28,44);c.font='15px monospace';c.fillText('MISSION SYSTEMS / SIMULATION',28,70);c.strokeStyle='#174457';for(let i=1;i<10;i++){c.beginPath();c.moveTo(24,100+i*35);c.lineTo(s-24,100+i*35);c.stroke()}for(let j=0;j<3;j++){c.strokeStyle=['#6fdedc','#f9bb67','#96a7ff'][j];c.beginPath();for(let i=0;i<100;i++){const x=i*4.6+25;const y=170+j*100+Math.sin(i*.13+j)*25+Math.sin(i*.38)*7;c.lineTo(x,y)}c.stroke()}c.fillStyle='#80e4ed';c.fillText('LINK ACTIVE',28,480)},512),[label,alert])
+ return <group position={position} scale={scale}><mesh><boxGeometry args={[1.9,1.3,.1]}/><meshStandardMaterial color="#111925" metalness={.4} roughness={.4}/></mesh><mesh position={[0,0,.06]}><planeGeometry args={[1.74,1.12]}/><meshBasicMaterial map={map}/></mesh></group>
+}
