@@ -28,8 +28,8 @@ export function TopBar() {
 
   return (
     <>
-      <header className="pointer-events-none fixed inset-x-0 top-0 z-30 flex items-start justify-between gap-3 p-3 md:p-4">
-        <div className="glass pointer-events-auto flex min-w-0 items-center gap-3 rounded-xl px-3 py-2 md:gap-4 md:px-4">
+      <header className="pointer-events-none fixed inset-x-0 top-0 z-30 flex items-start justify-end gap-2 p-2 md:justify-between md:p-4">
+        <div className="glass pointer-events-auto hidden min-w-0 items-center gap-3 rounded-xl px-3 py-2 md:flex md:gap-4 md:px-4">
           <button type="button" onClick={() => go({ name: 'hub' })} className="min-w-0 text-left" aria-label={tr("ハブへ戻る")}>
             <div className="truncate font-mono text-[9px] tracking-[0.35em] text-hud-dim">ASTRONAUT ACADEMY</div>
             <div className={`truncate text-sm font-semibold leading-tight ${debugMode ? 'text-amber' : ''}`}>{debugMode ? tr("デバッグモード") : rank.title}</div>
@@ -45,20 +45,20 @@ export function TopBar() {
             BADGES <span className="text-amber">{done}</span>/{MODULES.length}
           </button>
         </div>
-        <div className="flex shrink-0 gap-2">
+        <div className="flex min-w-0 flex-wrap justify-end gap-1 md:shrink-0 md:gap-2">
           <LanguageSwitch />
           {debugMode && <HudButton onClick={() => setDebugMenu(true)} className="glass border-amber/50 px-2 font-mono text-amber" aria-label={tr("デバッグメニューを開く")}>DEBUG</HudButton>}
           {screen.name !== 'hub' && (
-            <HudButton sound="back" onClick={() => go({ name: 'hub' })} className={`glass px-3 ${debugMode ? 'max-sm:!hidden' : ''}`}>
+            <HudButton sound="back" onClick={() => go({ name: 'hub' })} className={`glass px-3 max-sm:!px-2 max-sm:!py-1.5 max-sm:!text-xs ${debugMode ? 'max-sm:!hidden' : ''}`}>
               {tr("ハブ")}</HudButton>
           )}
-          <HudButton onClick={() => go({ name: 'review' })} className={`glass px-2 ${debugMode ? 'max-sm:!hidden' : ''}`} disabled={review.length === 0}>
-            <span className="hidden sm:inline">{tr("復習")}</span><span className="sm:hidden">{tr("復習")}</span>{review.length > 0 && <span className="rounded bg-amber/20 px-1.5 font-mono text-[11px] text-amber">{review.length}</span>}
+          <HudButton onClick={() => go({ name: 'review' })} className={`glass px-2 max-sm:!px-2 max-sm:!py-1.5 max-sm:!text-xs ${debugMode ? 'max-sm:!hidden' : ''}`} disabled={review.length === 0}>
+            {tr("復習")}{review.length > 0 && <span className="rounded bg-amber/20 px-1.5 font-mono text-[11px] text-amber">{review.length}</span>}
           </HudButton>
           <HudButton onClick={() => go({ name: 'credits' })} className="glass px-3 max-md:!hidden">
             {tr("出典")}</HudButton>
-          <HudButton onClick={() => setFeedback(true)} className="glass px-3">{tr("感想")}</HudButton>
-          <HudButton onClick={() => setSettings(true)} className="glass px-3" aria-label={tr("設定")}>
+          <HudButton onClick={() => setFeedback(true)} className="glass px-3 max-sm:!px-2 max-sm:!py-1.5 max-sm:!text-xs">{tr("感想")}</HudButton>
+          <HudButton onClick={() => setSettings(true)} className="glass px-3 max-sm:!px-2 max-sm:!py-1.5 max-sm:!text-xs" aria-label={tr("設定")}>
             {tr("設定")}</HudButton>
         </div>
       </header>
