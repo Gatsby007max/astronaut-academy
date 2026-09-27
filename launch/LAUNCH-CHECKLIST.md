@@ -2,11 +2,11 @@
 
 ## 公開ゲート
 
-- [ ] `npm test`, `npm run check:content`, `npm run build:pages`, `npm run pack:itch` が通る。
+- [x] `npm test`, `npm run check:content`, `npm run check:build`, `npm run build:pages`, `npm run pack:itch` が通る（11ファイル98テスト、9コース・90レッスン・144問・671 UI文字列を検査）。
 - [ ] 9コースの日英でレッスン、クイズ、実技、進捗が操作できる。言語を切り替えても同じIDと採点・進捗を使う。
 - [ ] GitHub Pagesとitch.ioの実URLで、横長・縦長PC、スマートフォン、リロード後の進捗、出典、感想導線を確認。
 - [ ] NASA素材と第三者素材の個別クレジットを確認。広報用のPV・画像・音楽・人物の権利を別途確認。
-- [ ] GitHub Discussionsを有効化し、**Play feedback / プレイ感想**, **Content & sources / 教材・出典**, **Ideas / アイデア**, **Translation / 翻訳**を作る。バグ報告はIssues、修正はPR。
+- [x] GitHub Discussionsを有効化し、**Play feedback / プレイ感想**, **Content & sources / 教材・出典**, **Ideas / アイデア**, **Translation / 翻訳**を作る。バグ報告はIssues、修正はPR。[歓迎スレッド](https://github.com/Gatsby007max/astronaut-academy/discussions/1)を固定済み。
 - [ ] itch.ioに無料HTML5 ZIPを登録し、決済を **No payments** にする。公開ページ内に非公認表示・クレジット・GitHubへのリンク。
 - [x] Ko-fi StandardをGatsbyZero名義、JPY、一回限りの任意支援に設定。公開ページでNASA非公認・支援とゲームアクセスの分離を明記。公開URLを`.env.production`に設定。ゲームからの実際の遷移は公開後に確認。
 - [ ] 管理できる既存アーティスト発信先を確認してから相互リンク。
@@ -29,9 +29,9 @@
 - `launch/assets/robotics-gameplay.png`は実プレイ画像。背景のNASA SVS星図を明示して使い、Ko-fiの支援訴求には転用しない。
 - 既存の15秒PVはNASAのISS・EMUモデルを含む。広報への使用前に全カットと音楽の確認が必要。
 - タイトル写真にはNASA宇宙飛行士Tracy C. Dysonが写る。ゲーム内の教育的な表示に限り、外部広報と支援募集には使わない。
-- GitHubリポジトリは公開済みで、Discussionsの4カテゴリを作成済み。PagesのソースはGitHub Actionsへ設定済み。コードのpushと実URLの検証は未完了。
+- [GitHubリポジトリ](https://github.com/Gatsby007max/astronaut-academy)と[GitHub Pages](https://gatsby007max.github.io/astronaut-academy/)は公開済み。ActionsのCI・Pagesビルドは成功。実URLで日英切替、教材出典、感想・Ko-fiリンク、390×844のスマートフォンと1440×900・900×1440のPC画面を確認。900px幅で窮屈だった上部の名前表示は修正中。
 - itch.ioのGatsbyZeroアカウントで作品ページの非公開Draftを保存済み。HTML5・No payments・モバイル対応・全画面起動・AI使用開示（Graphics / Text & Dialog / Code）を設定。ZIP、表紙、実プレイ画像のアップロードと公開は未完了。ChromeのChatGPT拡張にローカルファイルアクセス権限がなく、ファイル選択で停止中。
-- [GatsbyZeroのKo-fi](https://ko-fi.com/gatsbyzero)は開設済み。Standard、JPY、月額支援オフ、一回限り最低100円の表示を確認。ゲームの公開ビルドへURLを設定済み。
+- [GatsbyZeroのKo-fi](https://ko-fi.com/gatsbyzero)は開設済み。Standard、JPY、月額支援オフ、一回限り最低100円の表示を確認。個人支援とゲーム参加を分離したプロフィール・お礼文・公開制作記録を設定し、GitHub Pagesと相互リンク。実公開ゲームの支援リンク先も確認済み。
 
 ## 週次記録
 

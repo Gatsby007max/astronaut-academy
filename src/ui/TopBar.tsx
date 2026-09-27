@@ -28,8 +28,8 @@ export function TopBar() {
 
   return (
     <>
-      <header className="pointer-events-none fixed inset-x-0 top-0 z-30 flex items-start justify-end gap-2 p-2 md:justify-between md:p-4">
-        <div className="glass pointer-events-auto hidden min-w-0 items-center gap-3 rounded-xl px-3 py-2 md:flex md:gap-4 md:px-4">
+      <header className="pointer-events-none fixed inset-x-0 top-0 z-30 flex items-start justify-end gap-2 p-2 lg:justify-between lg:p-4">
+        <div className="glass pointer-events-auto hidden min-w-0 items-center gap-3 rounded-xl px-3 py-2 lg:flex lg:gap-4 lg:px-4">
           <button type="button" onClick={() => go({ name: 'hub' })} className="min-w-0 text-left" aria-label={tr("ハブへ戻る")}>
             <div className="truncate font-mono text-[9px] tracking-[0.35em] text-hud-dim">ASTRONAUT ACADEMY</div>
             <div className={`truncate text-sm font-semibold leading-tight ${debugMode ? 'text-amber' : ''}`}>{debugMode ? tr("デバッグモード") : rank.title}</div>

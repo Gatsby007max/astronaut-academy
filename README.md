@@ -4,6 +4,8 @@ GatsbyZero制作の無料ブラウザゲーム。NASAの公開資料をもとに
 
 **English:** A free, independent browser game by GatsbyZero with nine astronaut-training courses, bilingual lessons and quizzes, and interactive 3D exercises. NASA did not create, certify, or endorse it.
 
+**[無料でプレイ / Play free on GitHub Pages](https://gatsby007max.github.io/astronaut-academy/)** · [感想を送る / Share feedback](https://github.com/Gatsby007max/astronaut-academy/discussions/1)
+
 感想・教材の訂正・翻訳への参加は[CONTRIBUTING.md](CONTRIBUTING.md)へ。自作コード、教材、NASA素材、独自アートの権利区分は[CONTENT-LICENSE.md](CONTENT-LICENSE.md)と[ASSET-CREDITS.md](ASSET-CREDITS.md)へ。支援は任意で、教材と参加権は変わりません。
 
 ## 起動
