@@ -25,7 +25,7 @@
 ## 確認済み・保留中の証跡（2026-09-27）
 
 - 出典監査: `npm run audit:sources` は49件、失敗0件。
-- 独自の`launch/assets/cover.png`とゲーム内の独自概念模型から作った`launch/assets/t38-scene.png`は、NASAの写真・モデル・人物・ロゴを含まない公開画像候補。
+- `launch/assets/cover.png`は公開ゲームのT-38実技画面から630×500に切り抜いた実プレイ表紙。ゲーム内の独自概念模型から作った`launch/assets/t38-scene.png`とともに、NASAの写真・モデル・人物・ロゴを含まない公開画像候補。以前の抽象表紙は`cover-abstract-630x500.png`として保存。
 - `launch/assets/robotics-gameplay.png`は実プレイ画像。背景のNASA SVS星図を明示して使い、Ko-fiの支援訴求には転用しない。
 - 既存の15秒PVはNASAのISS・EMUモデルを含む。広報への使用前に全カットと音楽の確認が必要。
 - タイトル写真にはNASA宇宙飛行士Tracy C. Dysonが写る。ゲーム内の教育的な表示に限り、外部広報と支援募集には使わない。

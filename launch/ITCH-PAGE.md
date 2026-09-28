@@ -14,7 +14,7 @@
 
 **Suggested tags:** Educational, Simulation, Space, Science, 3D, Browser
 
-**Cover:** `launch/assets/cover.png` — original abstract illustration. **Images:** `launch/assets/t38-scene.png` — original conceptual 3D scene render, no NASA media; `launch/assets/robotics-gameplay.png` — actual game screenshot with original arm and vehicle, plus a credited [NASA SVS star map](https://svs.gsfc.nasa.gov/4851) in the background. Do not upload the existing NASA ISS/EMU trailer or the title photograph as promotional media without a separate rights review.
+**Cover:** `launch/assets/cover.png` — 630 × 500 crop of the actual T-38 practical training screen, with no generated key art or NASA media. **Images:** `launch/assets/t38-scene.png` — original conceptual 3D scene render, no NASA media; `launch/assets/robotics-gameplay.png` — actual game screenshot with original arm and vehicle, plus a credited [NASA SVS star map](https://svs.gsfc.nasa.gov/4851) in the background. Do not upload the existing NASA ISS/EMU trailer or the title photograph as promotional media without a separate rights review.
 
 ## English page text
 
@@ -26,7 +26,7 @@ Start with Orientation. Use the mouse or touch to select buttons and 3D markers;
 
 This is a free, independent project. NASA did not create, certify, endorse, or partner on it. NASA media and sources used inside the educational game are individually credited in the [asset register](https://github.com/Gatsby007max/astronaut-academy/blob/main/ASSET-CREDITS.md) and in the game. The cover and T-38 scene render contain no NASA media. The robotics screenshot includes a credited NASA SVS star map in the background.
 
-English translation drafts, parts of the code, and the original vector cover were made with Codex assistance and are open to correction. In itch.io's AI disclosure, select **Yes**, **Text & Dialog**, **Code**, and **Graphics**. The cover's provenance is recorded in [ASSET-CREDITS.md](../ASSET-CREDITS.md).
+English translation drafts, parts of the code, and some original game graphics were made with Codex assistance and are open to correction. The selected cover is cropped from a real game screenshot. In itch.io's AI disclosure, select **Yes**, **Text & Dialog**, **Code**, and **Graphics**. The cover's provenance is recorded in [ASSET-CREDITS.md](../ASSET-CREDITS.md).
 
 ## 日本語の掲載文
 
@@ -36,4 +36,4 @@ English translation drafts, parts of the code, and the original vector cover wer
 
 改善への参加は[GitHub Discussions](https://github.com/Gatsby007max/astronaut-academy/discussions)、再現できる不具合は[Issues](https://github.com/Gatsby007max/astronaut-academy/issues/new/choose)、修正案は[Pull Request](https://github.com/Gatsby007max/astronaut-academy/pulls)で受け付けます。支援の有無で教材や参加権は変わりません。
 
-NASAが本作を制作・認定・推奨・提携したものではありません。ゲーム内のNASA素材と資料は[素材台帳](https://github.com/Gatsby007max/astronaut-academy/blob/main/ASSET-CREDITS.md)とゲーム内で個別に出典を表示しています。表紙とT-38画像は独自制作です。実プレイ画像の背景には出典を示したNASA SVSの星図を使用しています。
+NASAが本作を制作・認定・推奨・提携したものではありません。ゲーム内のNASA素材と資料は[素材台帳](https://github.com/Gatsby007max/astronaut-academy/blob/main/ASSET-CREDITS.md)とゲーム内で個別に出典を表示しています。表紙は独自のT-38実技画面を切り抜いたものです。ロボティクスの実プレイ画像の背景には出典を示したNASA SVSの星図を使用しています。
