@@ -17,7 +17,9 @@ The existing 15-second trailer and gameplay stills other than the original scene
 
 ## Original launch artwork
 
-`launch/assets/cover.png` is an **actual gameplay screenshot**, not generated key art. It was cropped from `launch/assets/cover-source-t38-practical.jpg`, captured from the public game's T-38 practical training screen at 1260 × 1000 pixels, then resized to 630 × 500 pixels. The crop excludes the debug label; no game objects or UI were added. The conceptual jet, runway, and sky are built in game code and contain no NASA photograph, model, logo, or person. This cover is for the game listing, not Ko-fi fundraising.
+`launch/assets/cover.png` uses GatsbyZero's supplied `launch/assets/cover-source-look-up.png` game screenshot (699 × 394 pixels). `node scripts/render-cover-from-screenshot.mjs` scales the screenshot to fit the 630 × 500 cover and adds only a dark lower band with typeset game title and creator credit. No generated image is used. The scene shows the game's point-cloud [NASA VTAD ISS model](https://science.nasa.gov/resource/international-space-station-3d-model/) and [NASA SVS star map](https://svs.gsfc.nasa.gov/4851). It contains no NASA employee, insignia, or logo. Use it for the factual free-game listing with source credit and a clear non-endorsement notice, not Ko-fi fundraising.
+
+`launch/assets/cover-t38-gameplay-630x500.png` and `launch/assets/cover-source-t38-practical.jpg` preserve the earlier actual T-38 gameplay cover and its source screenshot. The conceptual jet, runway, and sky are built in game code and contain no NASA photograph, model, logo, or person.
 
 `launch/assets/cover.svg` and `launch/assets/cover-abstract-630x500.png` preserve the earlier Codex-assisted abstract illustration, which is no longer the selected cover. `launch/assets/t38-scene.png` is an unretouched render of the game's own conceptual T-38 scene, copied from the existing promo capture. It contains no NASA photograph, model, logo, or person. It is a scene render rather than a screenshot of the playable interface.
 

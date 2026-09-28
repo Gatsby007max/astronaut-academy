@@ -14,7 +14,7 @@
 
 **Suggested tags:** Educational, Simulation, Space, Science, 3D, Browser
 
-**Cover:** `launch/assets/cover.png` — 630 × 500 crop of the actual T-38 practical training screen, with no generated key art or NASA media. **Images:** `launch/assets/t38-scene.png` — original conceptual 3D scene render, no NASA media; `launch/assets/robotics-gameplay.png` — actual game screenshot with original arm and vehicle, plus a credited [NASA SVS star map](https://svs.gsfc.nasa.gov/4851) in the background. Do not upload the existing NASA ISS/EMU trailer or the title photograph as promotional media without a separate rights review.
+**Cover:** `launch/assets/cover.png` — 630 × 500 layout made from GatsbyZero's supplied game screenshot with deterministic typography, no generated art. It shows the game's point-cloud [NASA VTAD ISS model](https://science.nasa.gov/resource/international-space-station-3d-model/) and [NASA SVS star map](https://svs.gsfc.nasa.gov/4851). **Images:** `launch/assets/t38-scene.png` — original conceptual 3D scene render, no NASA media; `launch/assets/robotics-gameplay.png` — actual game screenshot with original arm and vehicle, plus the credited NASA SVS star map. Do not upload the existing NASA ISS/EMU trailer or the title photograph as promotional media without a separate rights review. Do not reuse the cover in Ko-fi fundraising.
 
 ## English page text
 
@@ -24,9 +24,9 @@ Start with Orientation. Use the mouse or touch to select buttons and 3D markers;
 
 **Help improve it:** [Play feedback, content and source corrections, ideas, and translation](https://github.com/Gatsby007max/astronaut-academy/discussions). [Report a reproducible bug](https://github.com/Gatsby007max/astronaut-academy/issues/new/choose). [Read the source and contribute](https://github.com/Gatsby007max/astronaut-academy).
 
-This is a free, independent project. NASA did not create, certify, endorse, or partner on it. NASA media and sources used inside the educational game are individually credited in the [asset register](https://github.com/Gatsby007max/astronaut-academy/blob/main/ASSET-CREDITS.md) and in the game. The cover and T-38 scene render contain no NASA media. The robotics screenshot includes a credited NASA SVS star map in the background.
+This is a free, independent project. NASA did not create, certify, endorse, or partner on it. NASA media and sources used inside the educational game are individually credited in the [asset register](https://github.com/Gatsby007max/astronaut-academy/blob/main/ASSET-CREDITS.md) and in the game. The cover shows the game's point-cloud ISS model based on NASA VTAD data and a NASA SVS star map, both credited above. The T-38 scene render contains no NASA media. The robotics screenshot includes the credited NASA SVS star map in the background.
 
-English translation drafts, parts of the code, and some original game graphics were made with Codex assistance and are open to correction. The selected cover is cropped from a real game screenshot. In itch.io's AI disclosure, select **Yes**, **Text & Dialog**, **Code**, and **Graphics**. The cover's provenance is recorded in [ASSET-CREDITS.md](../ASSET-CREDITS.md).
+English translation drafts, parts of the code, and some original game graphics were made with Codex assistance and are open to correction. The selected cover uses a supplied game screenshot and typeset text, with no generated image. In itch.io's AI disclosure, select **Yes**, **Text & Dialog**, **Code**, and **Graphics** for the project as a whole. The cover's provenance is recorded in [ASSET-CREDITS.md](../ASSET-CREDITS.md).
 
 ## 日本語の掲載文
 
@@ -36,4 +36,4 @@ English translation drafts, parts of the code, and some original game graphics w
 
 改善への参加は[GitHub Discussions](https://github.com/Gatsby007max/astronaut-academy/discussions)、再現できる不具合は[Issues](https://github.com/Gatsby007max/astronaut-academy/issues/new/choose)、修正案は[Pull Request](https://github.com/Gatsby007max/astronaut-academy/pulls)で受け付けます。支援の有無で教材や参加権は変わりません。
 
-NASAが本作を制作・認定・推奨・提携したものではありません。ゲーム内のNASA素材と資料は[素材台帳](https://github.com/Gatsby007max/astronaut-academy/blob/main/ASSET-CREDITS.md)とゲーム内で個別に出典を表示しています。表紙は独自のT-38実技画面を切り抜いたものです。ロボティクスの実プレイ画像の背景には出典を示したNASA SVSの星図を使用しています。
+NASAが本作を制作・認定・推奨・提携したものではありません。ゲーム内のNASA素材と資料は[素材台帳](https://github.com/Gatsby007max/astronaut-academy/blob/main/ASSET-CREDITS.md)とゲーム内で個別に出典を表示しています。表紙は提供されたゲーム画面から作成し、NASA VTADのISSモデルとNASA SVSの星図を使用しています。ロボティクスの実プレイ画像の背景にも、出典を示したNASA SVSの星図を使用しています。
